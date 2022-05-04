@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Hide images, text formats and SSH
+.jpg 
+.gif
+.png 
+.svg 
+.pdf 
+.ssh 
