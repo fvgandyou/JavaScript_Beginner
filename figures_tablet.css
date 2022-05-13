@@ -1,0 +1,10 @@
+body {
+    background-size: cover;
+} 
+main {
+    margin: 16px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}

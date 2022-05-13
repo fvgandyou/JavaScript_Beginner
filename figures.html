@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,200;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./figures.css">
+    <link rel="stylesheet" href="./figures_tablet.css" media="(min-width: 426px)">
+    <title>Geometric Figures</title>
+</head>
+<body>
+    <header class="title-principal">
+        <h1>Geometric Figures</h1>
+        <p>The first activity of practice Javascript course</p>
+    </header>
+    <main>
+        <section class="circle">
+            <h2>Calculate in a circle the diameter, perimeter and area</h2>
+            <form action="">
+                <div class="circle__input">
+                    <label for="inputCircle">
+                        Write the measure of radio:
+                    </label>
+                    <input type="number" id="inputCircle">
+                </div>
+                <div class="circle__buttons">
+                    <button type="button" onclick="calculateCircleDiameter()">
+                        Calculate Diameter
+                    </button>
+                    <button type="button" onclick="calculateGirth()">
+                        Calculate Girth
+                    </button>
+                    <button type="button" onclick="calculateCircleArea()">
+                        Calculate Area
+                    </button>
+                </div>
+            </form>
+            <div class="circle__form"></div>
+        </section>
+        <section class="square">
+            <h2>Calculate in a square the perimeter and area</h2>
+            <form action="">
+                <div class="square__input">
+                    <label for="inputSquare">
+                        Write the length of each side of square:
+                    </label>
+                    <input type="number" id="inputSquare">
+                </div>
+                <div class="square__buttons">
+                    <button type="button" onclick="calculateSquarePerimeter()">
+                        Calculate Perimeter
+                    </button>
+                    <button type="button" onclick="calculateSquareArea()">
+                        Calculate Area
+                    </button>
+                </div>
+            </form>
+            <div class="square__form"></div>
+        </section>
+        <section class="triangle">
+            <h2>Calculate in a triangle the perimeter and area</h2>
+            <form action="">
+                <div class="triangle__input">
+                    <label for="inputSideA">
+                        Write the length of left side of triangle:
+                    </label>
+                    <input type="number" id="inputSideA">
+                </div>
+                <div class="triangle__input">
+                    <label for="inputSideB">
+                        Write the length of right side of triangle:
+                    </label>
+                    <input type="number" id="inputSideB">
+                </div>
+                <div class="triangle__input">
+                    <label for="inputBase">
+                    Write the length of base of triangle:
+                    </label>
+                    <input type="number" id="inputBase">
+                </div>
+                <div class="triangle__buttons">
+                    <button type="button" onclick="calculateTrianglePerimeter()">
+                        Calculate Perimeter
+                    </button>
+                    <button type="button" onclick="calculateTriangleArea()">
+                        Calculate Area
+                    </button>
+                </div> 
+            </form>
+            <div class="triangle__form">
+                <div class="triangle__form--left"></div>
+                <div class="triangle__form--right"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>All Rights Reserved. <a href="">HotBlueSensation</a> Group</p>
+    </footer>
+    <!-- <script src="./figures.js"></script> -->
+    <script src="./figures_functions.js"></script>
+</body>
+</html>

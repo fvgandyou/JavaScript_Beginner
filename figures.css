@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --lg: 2.4rem;
+    --md: 1.8rem;
+    --sm: 1.4rem;
+    --red: rgba(254, 99, 99, 0.5);
+    --yellow: rgba(234, 244, 146, 0.5);
+    --blue: rgba(146, 198, 244, 0.5);
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Titillium Web', sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://i.postimg.cc/W3v71bBC/Geometric-Squares.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+a {
+    text-decoration: none;
+    color: grey;
+}
+button {
+    width: 160px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: var(--sm);
+    line-height: 1.4rem;
+    padding: 6px;
+    border: none;
+    border-radius: 2px;
+    background-color: antiquewhite;
+    box-shadow: 2px 2px 2px rgba(85, 79, 79, 0.423);
+}
+button:hover {
+    font-weight: 700;
+    background-color: rgb(237, 164, 91);
+}
+input {
+    width: 100px;
+    padding: 2px;
+    font-size: var(--sm);
+    line-height: 1.4rem;
+}
+.title-principal {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.title-principal h1 {
+    width: 50%;
+    max-width: 140px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3rem;
+    -webkit-text-stroke: 1px white;
+}
+.title-principal p {
+    width: 50%;
+    min-width: 160px;
+    max-width: 400px;
+    font-size: var(--md);
+    font-weight: 700;
+    line-height: 2rem;
+    -webkit-text-stroke: 0.5px white;
+}
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+.square, .triangle, .circle {
+    position: relative;
+    width: 90%;
+    max-width: 340px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--red);
+    border-radius: 8px;
+}
+.square h2, .triangle h2, .circle h2 {
+    width: 80%;
+    padding: 10px 0;
+    font-size: var(--md);
+    line-height: 2rem;
+}
+.square form, .triangle form, .circle form {
+    width: 80%;
+    max-width: 240px;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+}
+.triangle form {
+    gap: 8px;
+}
+.square__input, .triangle__input, .circle__input {
+    width: 80%;
+    justify-self: center;
+    font-size: var(--sm);
+    line-height: 2.4rem;
+}
+.square__buttons, .triangle__buttons, .circle__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.triangle {
+    height: 310px;
+    background-color: var(--yellow);
+}
+.circle {
+    background-color: var(--blue);
+}
+.circle__form {
+    position: absolute;
+    z-index: -1;
+    width: 180px;
+    height: 180px;
+    background-color: rgba(0, 0, 255, 0.6);
+    border-radius: 50%;
+}
+.square__form {
+    position: absolute;
+    z-index: -1;
+    width: 180px;
+    height: 180px;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.triangle__form {
+    position: absolute;
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    display: flex;
+}
+.triangle__form--left {
+    width: 50%;
+    background: linear-gradient(116deg, transparent 50%, rgba(255, 255, 0, 0.6) 50%);
+}
+.triangle__form--right {
+    width: 50%;
+    background: linear-gradient(64deg, rgba(255, 255, 0, 0.6) 50%, transparent 50%);
+}
+footer {
+    width: 100%;
+    padding: 8px 0;
+    font-size: var(--sm);
+    text-align: center;
+    color: grey;
+}
