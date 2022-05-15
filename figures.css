@@ -10,6 +10,7 @@
     --red: rgba(254, 99, 99, 0.5);
     --yellow: rgba(234, 244, 146, 0.5);
     --blue: rgba(146, 198, 244, 0.5);
+    --grey: rgba(177, 177, 177, 0.5);
 }
 html {
     font-size: 62.5%;
@@ -77,14 +78,21 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-items: center;
     align-items: center;
     gap: 20px;
 }
+.section1, .section2, .section3 {
+    width: 100%;
+    max-width: 340px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+}
 .square, .triangle, .circle {
+    place-self: center;
     position: relative;
     width: 90%;
-    max-width: 340px;
     height: 230px;
     display: flex;
     flex-direction: column;
@@ -167,4 +175,29 @@ footer {
     font-size: var(--sm);
     text-align: center;
     color: grey;
+}
+.circle__results, .square__results, .triangle__results {
+    width: 90%;
+    place-self: center;
+    background-color: var(--grey);
+    border-radius: 8px;
+}
+.circle__results h4, .square__results h4, .triangle__results h4 {
+    font-size: var(--sm);
+    padding: 4px 8px;
+}
+.circle__results div, .square__results div, .triangle__results div {
+    width: 90%;
+    height: auto;
+    min-height: 36px;
+    margin: 0 auto 8px;
+    padding: 4px;
+    background-color: white;
+    border-radius: 4px;
+}
+.circle__results p, .square__results p, .triangle__results p {
+    width: 100%;
+    height: auto;
+    font-size: var(--sm);
+    line-height: 1.8rem;
 }

@@ -62,7 +62,9 @@ function calculateSquarePerimeter() {
     value = input.value;
 
     const perimeter = perimeterSquare(value);
-    alert(perimeter);
+    
+    const resultPerimeter = document.getElementById("resultSquare");
+    resultPerimeter.innerHTML = "The square perimeter with length of "+value+" for each side is "+perimeter+" cm";
 }
 
 function calculateSquareArea() {
@@ -70,7 +72,9 @@ function calculateSquareArea() {
     value = input.value;
 
     const area = areaSquare(value);
-    alert(area);
+    
+    const resultArea = document.getElementById("resultSquare");
+    resultArea.innerHTML = "The square area with length of "+value+" for each side is "+area+" cm<sup>2</sup>";
 }
 
 function calculateTrianglePerimeter() {
@@ -81,8 +85,17 @@ function calculateTrianglePerimeter() {
     const inputC = document.getElementById("inputBase");
     valueC = Number(inputC.value);
 
-    const perimeter = perimeterTriangle(valueA, valueB, valueC);
-    alert(perimeter);
+    if(valueA > 0 && valueB > 0 && valueC > 0) {
+        const perimeter = perimeterTriangle(valueA, valueB, valueC);
+    
+        const resultPerimeter = document.getElementById("resultTriangle");
+        resultPerimeter.innerHTML = "The triangle perimeter is "+perimeter+" cm";
+    }
+    else {
+        const resultPerimeter = document.getElementById("resultTriangle");
+        resultPerimeter.innerHTML = "Please, write a correct number in the fields";
+    }
+    
 }
 
 function calculateTriangleArea() {
@@ -93,8 +106,16 @@ function calculateTriangleArea() {
     const inputC = document.getElementById("inputBase");
     valueC = Number(inputC.value);
 
-    const area = areaTriangle(valueA, valueB, valueC);
-    alert(area);
+    if(valueA > 0 && valueB > 0 && valueC > 0) {
+        const area = areaTriangle(valueA, valueB, valueC);
+
+        const resultArea = document.getElementById("resultTriangle");
+        resultArea.innerHTML = "The triangle area is "+area+" cm<sup>2</sup>";
+    }
+    else {
+        const resultPerimeter = document.getElementById("resultTriangle");
+        resultPerimeter.innerHTML = "Please, write a correct number in the fields";
+    }
 }
 
 function calculateCircleDiameter() {
@@ -102,7 +123,9 @@ function calculateCircleDiameter() {
     value = input.value;
 
     const diameter = diameterCircle(value);
-    alert(diameter);
+    
+    const resultDiameter = document.getElementById("resultCircle");
+    resultDiameter.innerHTML = "The circle diameter is "+diameter+" cm";
 }
 
 function calculateGirth() {
@@ -110,7 +133,9 @@ function calculateGirth() {
     value = input.value;
 
     const girthEnd = girth(value);
-    alert(girthEnd);
+    
+    const resultGirth = document.getElementById("resultCircle");
+    resultGirth.innerHTML = "The girth value is "+girthEnd+" cm";
 }
 
 function calculateCircleArea() {
@@ -118,5 +143,7 @@ function calculateCircleArea() {
     value = input.value;
 
     const area = areaCircle(value);
-    alert(area);
+    
+    const resultArea = document.getElementById("resultCircle");
+    resultArea.innerHTML = "The circle area is "+area+" cm<sup>2</sup>";
 }
