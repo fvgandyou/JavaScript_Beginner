@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Percentages and Discounts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./discounts.css">
+    <link rel="stylesheet" href="./discounts-tablet.css" media="(min-width: 426px)">
 </head>
 <body>
-    <header>
-        <h1>Percentages and Discounts</h1>
-    </header>
-    <main>
-        <section>
+    <section class="container">
+        <header class="container__title">
+            <h1>Percentages and Discounts</h1>
+        </header>
+        <main class="container__body">
             <h2>Calculate the products price applying discounts</h2>
             <form action="">
                 <label for="inputPrice">Write the price of product: </label>
@@ -23,9 +28,11 @@
                 <button type="button" onclick="activePriceDiscount()">Calculate Final Price</button>
                 <p id="finalPrice"></p>
             </form>
-        </section>
-    </main>
-
+        </main>
+        <footer>
+            <p>All Rights Reserved. <a href="">HotBlueSensation</a> Group</p>
+        </footer>
+    </section>
     <script src="./discounts.js"></script>
 </body>
 </html>

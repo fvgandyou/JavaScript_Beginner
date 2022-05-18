@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --sm: 1.2rem;
+    --md: 1.6rem;
+    --lg: 2.0rem;
+    --color-title: #526ed2;
+    --color-subtitle: #2d2931;
+    --primary: rgba(239, 160, 1, 0.7);
+    --secondary: #ab3c05;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Comfortaa', cursive;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://i.postimg.cc/RhDt5MpX/Ads-Promo.jpg");
+    background-repeat: no-repeat;
+}
+a {
+    text-decoration: none;
+    font-size: var(--sm);
+    color: var(--color-subtitle);
+}
+button {
+    width: fit-content;
+    align-self: center;
+    height: 28px;
+    padding: 0 8px;
+    font-family: 'Comfortaa', cursive;
+    font-size: var(--sm);
+    line-height: var(--sm);
+    color: var(--secondary);
+    border: none;
+    border-radius: 4px;
+    background-color: aliceblue;
+}
+button:hover {
+    font-weight: bolder;
+}
+.container {
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: rgba(239, 160, 1, 0.2);
+}
+.container__title {
+    padding: 12px 0 0;
+    font-size: var(--lg);
+    color: var(--color-title);
+    -webkit-text-stroke: 0.1px var(--primary);
+}
+.container__body {
+    width: 80%;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container__body h2 {
+    font-size: var(--md);
+    color: var(--secondary);
+    -webkit-text-stroke: 0.05px var(--primary);
+}
+.container__body form {
+    padding: 12px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: var(--sm);
+}
+.container__body form label {
+    color: var(--color-subtitle);
+}
+.container__body form input {
+    align-self: center;
+    height: 20px;
+    padding: 4px;
+    text-align: center;
+    vertical-align: center;
+    line-height: var(--sm);
+    border: none;
+    border-radius: 4px;
+}
+.container__body form input:nth-child(2) {
+    width: 100px;
+}
+.container__body form input:nth-child(4) {
+    width: 200px;
+}
+.container__body form p {
+    align-self: center;
+    width: 80%;
+    padding: 0 4px;
+    font-size: var(--sm);
+    font-weight: bold;
+    line-height: 2rem;
+    vertical-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+
+footer {
+    width: 100%;
+    padding: 8px 0;
+    font-size: var(--sm);
+    color: var(--color-subtitle);
+}
