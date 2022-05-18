@@ -16,9 +16,11 @@
             <form action="">
                 <label for="inputPrice">Write the price of product: </label>
                 <input type="number" id="inputPrice">
-                <label for="inputDiscount">Write the discount of product: </label>
-                <input type="number" id="inputDiscount">
-                <button type="button" onclick="activePriceDiscount()">Calculate</button>
+                <!-- <label for="inputDiscount">Write the discount of produc: </label>
+                <input type="number" id="inputDiscount"> The above was applied when insert a number to validate a discount -->
+                <label for="inputCoupon">COUPON </label>
+                <input type="text" id="inputCoupon">
+                <button type="button" onclick="activePriceDiscount()">Calculate Final Price</button>
                 <p id="finalPrice"></p>
             </form>
         </section>

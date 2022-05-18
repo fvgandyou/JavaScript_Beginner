@@ -1,3 +1,9 @@
+const coupons = [
+    {name: "ISYOURTIME", discount: 15},
+    {name: "SOMETHINGSPECIAL", discount: 20},
+    {name: "YOUAREPREFERENTIAL", discount: 30}
+]
+
 function calculatePriceWithDiscount(originalPrice, discount) {
     const priceWithDiscount = (originalPrice * (100 - discount))/100;
     return priceWithDiscount
@@ -5,12 +11,26 @@ function calculatePriceWithDiscount(originalPrice, discount) {
 
 function activePriceDiscount() {
     const originalPriceUser = document.getElementById('inputPrice').value;
-    const originalDiscountUser = document.getElementById('inputDiscount').value;
+    const couponValue = document.getElementById('inputCoupon').value;
 
-    const finalPrice = calculatePriceWithDiscount(originalPriceUser,originalDiscountUser);
+// Using objects to determinate the final price of products when is applied a coupons
 
-    const resultPrice = document.getElementById('finalPrice');
-    resultPrice.innerHTML = "The product price with discount is: $"+finalPrice;
+    const couponValueValidated = function (coupon) {
+        return coupon.name === couponValue;
+    };
+
+    const userCoupon = coupons.find(couponValueValidated);
+
+    if(!userCoupon) {
+        alert("The coupon "+couponValue+" isn't valid")
+    }
+    else {
+        const discount = userCoupon.discount;
+        const finalPrice = calculatePriceWithDiscount(originalPriceUser, discount);
+
+        const resultPrice = document.getElementById('finalPrice');
+        resultPrice.innerHTML = "The product price with discount is: $"+finalPrice;
+    }
 }
 
 // const originalPrice = 100;
