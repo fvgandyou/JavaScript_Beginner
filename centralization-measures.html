@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,200;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./centralization-measures.css">
     <title>Mean, Median and Mode</title>
 </head>
 <body>
-    <h1>Mean, Median and Mode</h1>
+    <section class="container">
+        <main class="container__principal">
+            <h1 class="container__principal--title">Mean, Median and Mode</h1>
+            <div class="container__principal--objects">
+                <label for="numbersArray">Write the numbers and save: </label>
+                <input type="number" name="numbers" id="numbersArray">
+                <button type="button" name="Save" onclick="getNumbersArray()">Save</button>
+                <div class="container__principal--dates">
+                    <button type="button" name="Dates" onclick="showDates()">Show Dates</button>
+                    <p id="dates"></p>
+                </div>
+            </div>
+            <div class="container__principal--calculates">
+                <button type="button" onclick="showMean()">Calculate Mean</button>
+                <p id="resultMean"></p>
+                <button type="button" onclick="showMedian()">Calculate Median</button>
+                <p id="resultMedian"></p>
+                <button type="button" onclick="showMode()">Calculate Mode</button>
+                <p id="resultMode"></p>
+            </div>
+        </main>
+        <footer>
+            <p>All Rights Reserved. <a href="">HotBlueSensation</a> Group</p>
+        </footer>    
+    </section>
     <script src="./centralization-measures.js"></script>
 </body>
 </html>

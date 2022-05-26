@@ -1,3 +1,5 @@
 body {
-    background-size: cover;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position-x: center;
 }

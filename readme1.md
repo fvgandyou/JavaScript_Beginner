@@ -16,18 +16,18 @@ Create a function that calculate the height of isosceles triangle
 - First step: Define formulas
 - Second step: Implement the formulas in JS
 - Third step: Create functions
-- Fourth step: Integrate JS to HTML (and CSS too) --> Not finish yet
+- Fourth step: Integrate JS to HTML (and CSS too)
 
 ## Lecture #3: MEAN, MEDIAN AND MODE
 
 - First step: Define formulas
 - Second step: Implement the formulas in JS
 - Third step: Create functions
-- Fourth step: Integrate JS to HTML (and CSS too) --> Not finish yet
+- Fourth step: Integrate JS to HTML (and CSS too)
 
 ## Lecture #4: FINAL ACTIVITY (SALARY)
 
 - First step: Define formulas
 - Second step: Implement the formulas in JS
 - Third step: Create functions
-- Fourth step: Integrate JS to HTML (and CSS too)
+- Fourth step: Integrate JS to HTML

@@ -8,9 +8,7 @@ function calculateMean(listMean) {
     // } Using 'for' to navigator into the array
 
     const sumList = listMean.reduce( // the method reduce is using to calculate sums (subtraction, multiplication) directly in the array function
-        function (accruedValue = 0, newElement) {
-            return accruedValue + newElement;
-        }
+        (accruedValue, newElement) => Number(accruedValue) + Number(newElement), 0        
     )
 
     const mean = Number((sumList / listMean.length).toFixed(4));
@@ -72,9 +70,41 @@ function calculateMode(listModeStart) {
         }
     );
 
-    return mode = arrayModeEnd[arrayModeEnd.length-1];
+    return mode = arrayModeEnd[arrayModeEnd.length-1][0];
 }
 
+//Interactive with HTML
+
+const numbersArray = [];
+function getNumbersArray() {
+    numbersUser = document.getElementById('numbersArray').value;
+    if(numbersUser === '') {
+        alert("the space isnt a number");
+    } else {
+        return numbersArray.push(numbersUser);
+    }
+}
+
+function showDates() {
+    stringArray = numbersArray.join(', ');//Using join to cocatenear the elements of array into a string
+    const dates = document.getElementById('dates');
+    return dates.innerHTML = stringArray;
+}
+
+function showMean() {
+    const resultMean = document.getElementById('resultMean');
+    return resultMean.innerHTML = calculateMean(numbersArray);
+}
+
+function showMedian() {
+    const resultMedian = document.getElementById('resultMedian');
+    return resultMedian.innerHTML = calculateMedian(numbersArray);
+}
+
+function showMode() {
+    const resultMode = document.getElementById('resultMode');
+    return resultMode.innerHTML = calculateMode(numbersArray);
+}
 //BONUS WEIGHTED MEAN
 
 const notes = [
